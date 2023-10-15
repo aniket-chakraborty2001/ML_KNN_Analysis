@@ -36,19 +36,20 @@ Now, I build the first model using 4 nearest neighbourhoods using the **KNeighbo
 
 Now, I build the first model using 6 nearest neighbourhoods using the **KNeighborsClassifier object of sklearn.neighbors module**. I fit the model with the training data(train_x_norm and train_y). After building the model, I use the .predict() method to get the predicted classes of the unseen test data using test_x_norm data set. The predicted class I get is 3,3,3,2,4. After this, I calculate the Accuracy of the Training data by fitting the train_x_norm data in the model and accuracy of testing data using the **accuracy_score() function of metrics module of sklearn package**. 
 
-### Interpretation of Model Accuracy
 
-I get the Model Accuracy on test data as 0.33(for k = 4) and 0.335(for k = 6) respectively. It is clear that Accuracy of model on test data is better for k = 6. It concluded that we build a grate model when k = 6
+## Interpretation of Model Accuracy
+
+I get the Model Accuracy on test data as 0.33(for k = 4) and 0.335(for k = 6) respectively. It is clear that Accuracy of model on test data is better for k = 6. It concluded that we build a grate model when k = 6. As we increase or decrease the value of k, model accuracy will change. But how it will change we can not guess. So, this process needs to be run multiple times using different values of k. Though there are some techniques that we can use to avoid this step repeated times.
 
 ## Question to be in Mind
 
 Then a question arises, how we can select the k value for which the test data accuracy will be maximum and what will be the accuracy value. To answer this, we can use two mwthods. The first method is by writing codes and comparing values. The second method is by graphical representation. 
 
-### **Method - 1: By Writing Codes:**
+#### **Method - 1: By Writing Codes:**
 
 In the fisrt method, we can get the mean and standard deviation of the Test set model accuracy by iterating the values of k from 1 upto 11. As range doesn't consider the last element, so k = 11 will be the solution of the problem. This will help to find the value of the mean accuracy of test data in model from k = 1 to k = 10. One thing to note that, before the process, we restrict the value of k to 10. After getting the mean and standard deviation of accuracy (calculated on test data) using numpy package, we can easily compare those 10 values are say which value is highest and for which k , the value is obtained.
 
-### **Method - 2: By Graphical Representation:**
+#### **Method - 2: By Graphical Representation:**
 
 I plot the mean accuracy (i calculated in the previous method) in Y axis against the k values in X axis using matplotlib library of python. If gives that between 6 and 8, the model accuracy is highest which is 0.35 and we get it for k = 7
 
