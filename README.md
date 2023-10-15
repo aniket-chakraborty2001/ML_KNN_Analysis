@@ -39,4 +39,3 @@ I get the Model Accuracy on test data as 0.33(for k = 4) and 0.335(for k = 6) re
 Then a question arises, how we can select the k value for which the test data accuracy will be maximum and what will be the accuracy value. To answer this, we can use two mwthods. The first method is by writing codes and comparing values. The second method is by graphical representation. 
 
 #### **Method - 1: By Writing Codes:**
-
