@@ -4,7 +4,7 @@ Consider the Telecommunication data set. Available in GitHub and Kaggle. Using t
 ## Classification
 A supervised Machine Learning algorithm, used to categorize some unknown items into a discete set of categories or classes. It uses the characteristics of the unknown item. For example, suppose a data set that consider whether a tumor cell in human body is bening or malignent. After observing say 100 data points, we train a model and using that we are prediting the next tumor will be bening or malignent depending on the features the tumor will have.
 
-# KNN or K-Nearest Neighbours
+## KNN or K-Nearest Neighbours
 A classification algorithm, used to predict the class of an unknowm object by observing the class of the neighbouring objects. So, looking only the 1 st neighbour is not best. So, in general we consider 6 or 7 nearest neighbours and observe the item that has most occurance. The unknown object will have the same class. KNN completly works on distance between two data points. This distance is not always Euclidian distance, it may be multi dimensional. For this reason, normalization in KNN is very important.
 
 ## About the Tele-Communication Data set
@@ -40,10 +40,16 @@ Now, I build the first model using 6 nearest neighbourhoods using the **KNeighbo
 
 I get the Model Accuracy on test data as 0.33(for k = 4) and 0.335(for k = 6) respectively. It is clear that Accuracy of model on test data is better for k = 6. It concluded that we build a grate model when k = 6
 
-### Question to be in Mind
+## Question to be in Mind
 
 Then a question arises, how we can select the k value for which the test data accuracy will be maximum and what will be the accuracy value. To answer this, we can use two mwthods. The first method is by writing codes and comparing values. The second method is by graphical representation. 
 
-#### **Method - 1: By Writing Codes:**
+### **Method - 1: By Writing Codes:**
 
+In the fisrt method, we can get the mean and standard deviation of the Test set model accuracy by iterating the values of k from 1 upto 11. As range doesn't consider the last element, so k = 11 will be the solution of the problem. This will help to find the value of the mean accuracy of test data in model from k = 1 to k = 10. One thing to note that, before the process, we restrict the value of k to 10. After getting the mean and standard deviation of accuracy (calculated on test data) using numpy package, we can easily compare those 10 values are say which value is highest and for which k , the value is obtained.
 
+### **Method - 2: By Graphical Representation:**
+
+I plot the mean accuracy (i calculated in the previous method) in Y axis against the k values in X axis using matplotlib library of python. If gives that between 6 and 8, the model accuracy is highest which is 0.35 and we get it for k = 7
+
+This completes the project on KNN in classification (Supervised Machine Learning)
