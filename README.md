@@ -18,6 +18,7 @@ The data set that is considered here is already attached in the file section. Th
   5. In train test split, general rule is maintained. 80% data for training and 20% data for testing.
 
 ## Project Stages
+
 I gone through some stages to finish the project and making it a well organized one. The stages of the project are well described and to the point. In the project, all the steps are done with notations, so that there will be no problem to understand each part of the project. The steps of the projevt are -
 
 **1. Basic Data Exploration:**
